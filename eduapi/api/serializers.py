@@ -6,5 +6,5 @@ from .models import Node
 class NodeSerializer(serializers.ModelSerializer):
     class Meta:
         model = Node
-        fields = ('id', 'slug', 'depth')
-        read_only_fields = ('depth',)
+        fields = ('id', 'slug', 'depth', 'path')
+        read_only_fields = ('depth', 'path')
