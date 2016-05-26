@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'treebeard',
+    'rest_framework',
+    'eduapi.api',
 ]
 
 MIDDLEWARE_CLASSES = [
