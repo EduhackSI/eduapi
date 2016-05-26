@@ -1,3 +1,9 @@
-from django.shortcuts import render
+from rest_framework import viewsets
 
-# Create your views here.
+from .models import Node
+from .serializers import NodeSerializer
+
+
+class NodeViewSet(viewsets.ModelViewSet):
+    queryset = Node.objects.all()
+    serializer_class = NodeSerializer
