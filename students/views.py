@@ -21,7 +21,7 @@ def clusteredview(request):
         studentdata = [student.AK_points, student.IT_points, student.KU_points, student.NL_points, student.RE_points, student.EN_points, student.GE_points, student.MA_points]
         temp.append(studentdata)
     data = np.array(temp)
-    kmeans = KMeans(n_clusters=2)
+    kmeans = KMeans(n_clusters=5)
     kmeans.fit(data)
     labels = kmeans.labels_
     result = {}
@@ -35,6 +35,7 @@ def clusteredview(request):
             result[student][key] = int(result[student][key])
     for student in result:
         resultlist.append([student] + [result[student]['AK_points'], result[student]['IT_points'], result[student]['KU_points'], result[student]['NL_points'], result[student]['RE_points'], result[student]['EN_points'], result[student]['GE_points'], result[student]['MA_points'], result[student]["cluster"]])
+    resultlist = resultlist.sort(key=lambda x: x[-1])
     context = {"result": resultlist}
     # print(result)
     return render(request, 'students/index.html', context)

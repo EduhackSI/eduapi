@@ -1,5 +1,6 @@
 #  eduapi for Learny McLearnface
 
+## In order to see the front-end demo of this project please check https://eduhacksi.github.io/frontend/
 ## Technical Background
 
 We used Django and Python for building the app. Python is a programming language and 
