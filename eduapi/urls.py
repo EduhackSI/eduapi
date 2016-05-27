@@ -19,11 +19,12 @@ from django.contrib import admin
 from rest_framework import routers
 
 from .api import views as api_views
-
+from students import views as students_views
 router = routers.DefaultRouter()
 router.register(r'node', api_views.NodeViewSet)
 
 urlpatterns = [
     url(r'^api/v1/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
+    url(r'^cluster/', students_views.clusteredview),
 ]

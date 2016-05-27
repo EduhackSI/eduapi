@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'treebeard',
     'rest_framework',
     'eduapi.api',
+    'students',
 ]
 
 MIDDLEWARE_CLASSES = [

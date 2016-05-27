@@ -1,0 +1,37 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Clustering Students</title>
+</head>
+<body>
+    <h1>Clustered Students</h1>
+    <h4>Students are clustered based on their collected score.</h4>
+    <table class="sortable">
+    <thead>
+    <tr>
+        <th>Naam</th>
+        <th>Aardrijkskunde</th>
+        <th>Informatica</th>
+        <th>Kunst</th>
+        <th>Nederlands</th>
+        <th>Rekenen</th>
+        <th>Engels</th>
+        <th>Geschiedenis</th>
+        <th>Maatschappij</th>
+        <th>Cluster</th>
+    </tr>
+    </thead>
+    <tbody>
+        {% for user in result %}
+            <tr>
+            {%  for score in user %}
+                <td>
+                {{ score }}
+              </td>
+            {% endfor %}
+            </tr>
+        {% endfor %}
+    </tbody>
+    </table>
+</body>
+</html>
